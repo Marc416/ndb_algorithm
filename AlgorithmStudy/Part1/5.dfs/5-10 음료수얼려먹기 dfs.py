@@ -46,6 +46,8 @@ def dfs(current_x, current_y):
 
 result = 0
 
+# 0으로 연결된 것들을 하나의 덩어리로 카운팅하는 것이 핵심
+
 # 세로
 for i in range(n):
     # 가로
