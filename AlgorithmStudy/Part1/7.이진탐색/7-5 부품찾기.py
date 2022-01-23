@@ -12,9 +12,6 @@ my_part.sort()
 
 
 def binary_search(my_part, target, start, end):
-    # Range Check
-    if start < 0 or end >= len(my_part):
-        return
     # If out of range, There is no data
     if start <= end:
         mid = (start + end) // 2
