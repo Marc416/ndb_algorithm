@@ -1,8 +1,16 @@
+import sys
+
+""" 입력 """
+# n, m = map(int, sys.stdin.readline())
 n, m = 6, 11
+# 시작노드 고정
 start = 1
-di = [9999] * (n + 1)
+# 최단 거리를 찾는 것이므로 목적지 노드의 default 거리를 최대로 잡고 더 작은 것을 비교하기
+di = [float('inf')] * (n + 1)
+# 시작 노드의 경로 이동 거리는 0
 di[start] = 0
-# graph = [[] for _ in range(m)]
+
+# graph = [list(map(int, input().split())) for _ in range(n)]
 graph = [
     [1, 2, 2],
     [1, 3, 5],
