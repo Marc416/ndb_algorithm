@@ -49,8 +49,9 @@ def move_virus(virus: list):
     return
 
 
+virus_q.sort(key=lambda data: data[2])
+
 for _ in range(s):
-    virus_q.sort(key=lambda data: data[2])
     for _ in range(len(virus_q)):
         q = virus_q.pop(0)
         move_virus(q)
