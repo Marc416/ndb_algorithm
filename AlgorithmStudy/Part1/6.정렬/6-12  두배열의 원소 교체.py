@@ -9,5 +9,7 @@ a_sort = sorted(a)  # 오름차순 정렬
 b_sort = sorted(b, reverse=True)  # 내림차순 정렬
 for i in range(k):
     a_sort[i], b_sort[i] = b_sort[i], a_sort[i]
-print(a_sort)
-print(b_sort)
+
+print(sum(a_sort))
+# print(a_sort)
+# print(b_sort)

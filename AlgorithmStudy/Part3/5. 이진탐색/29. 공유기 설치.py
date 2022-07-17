@@ -6,8 +6,8 @@ data = list(int(sys.stdin.readline()) for _ in range(n))
 data.sort()
 
 # 공유기를 설치할 수 있는 거리의 범위 (start~end)
-start = data[1] - data[0]
-end = data[-1] - data[0]
+start = data[0]
+end = data[-1]
 
 # 공유기 거리
 dist = 0

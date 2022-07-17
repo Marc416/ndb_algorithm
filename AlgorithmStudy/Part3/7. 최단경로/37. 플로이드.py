@@ -28,5 +28,11 @@ for v in range(1, n + 1):
             if graph[s][e] > graph[s][v] + graph[v][e]:
                 graph[s][e] = graph[s][v] + graph[v][e]
 
-for i in range(n + 1):
-    print(graph[i])
+# RESULT
+for a in range(1, n + 1):
+    for b in range(1, n + 1):
+        if graph[a][b] == float('INF'):
+            print(0, end=' ')
+        else:
+            print(graph[a][b], end=' ')
+    print()

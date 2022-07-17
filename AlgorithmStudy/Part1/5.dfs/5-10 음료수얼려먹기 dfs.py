@@ -1,3 +1,8 @@
+"""
+N x M = 1,000,000 -> 최대 시간 복잡도 N
+요지 : 연결된 0의 그룹수를 찾기
+
+"""
 # n, m = map(int, input().split())
 n, m = 4, 5
 ice_bucket = []
@@ -19,7 +24,8 @@ four_direction = [
 
 def dfs(current_x, current_y):
     # Outside
-    if current_x < 0 or current_y < 0 or current_x >= n or current_y >= m:
+    if current_x < 0 or current_y < 0 or \
+            current_x >= n or current_y >= m:
         return False
 
     # Wall
@@ -54,6 +60,7 @@ for i in range(n):
     for j in range(m):
         if dfs(i, j):
             result += 1
+            # 과정을 보여주기위한 부분
             for f in ice_bucket:
                 print(f)
             print()

@@ -1,6 +1,13 @@
+from sys import stdin
+
 v, e = 6, 4
 data = [(1, 4), (2, 3), (2, 4), (5, 6)]
 parent = [0] * (v + 1)
+
+n, m = map(int, stdin.readline().split())
+data = []
+for i in range(m + 1):
+    data.append(map(int, stdin.readline().split()))
 
 
 def find_parent(parent: list, node: int):

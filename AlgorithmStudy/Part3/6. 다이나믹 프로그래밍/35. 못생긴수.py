@@ -12,11 +12,12 @@ for i in range(1, n):
 
     if ugly[i] == next2:
         i2 += 1
-        next2 = ugly[i] * i2
+        next2 = ugly[i2] * 2
     if ugly[i] == next3:
         i3 += 1
-        next3 = ugly[i] * i3
+
+        next3 = ugly[i3] * 3
     if ugly[i] == next5:
         i5 += 1
-        next5 = ugly[i] * i5
+        next5 = ugly[i5] * 5
 

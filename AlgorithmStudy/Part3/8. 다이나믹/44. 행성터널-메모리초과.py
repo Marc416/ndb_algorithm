@@ -8,6 +8,7 @@ for _ in range(n):
     dynamic.append(temp_list)
 
 q = []
+# 모든 지점들에 대한 간선 데이터를 다이나믹으로 생성 -> 메모리 초과
 for i in range(n - 1):
     for j in range(i + 1, n):
         xi, yi, zi = dynamic[i]
@@ -28,7 +29,6 @@ def union_parent(parent, a, b):
     a = find_parent(parent, a)
     b = find_parent(parent, b)
 
-    # 특별한 룰은 아니지만 오름차순으로 parent 를 설정해줌
     if a < b:
         parent[b] = a
     else:
@@ -39,6 +39,7 @@ res = 0
 count = 0
 while q:
     cost, a, b = heapq.heappop(q)
+    # 모든 노드를 연결 하면 순환문 탈출
     if count == n:
         break
     if find_parent(parent, a) != find_parent(parent, b):

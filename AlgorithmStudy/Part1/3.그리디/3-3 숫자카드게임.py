@@ -12,6 +12,27 @@ def python_min_method(data: list):
         big_in_min = res
 
 
+def sum_array(array: list[int]) -> int:
+    size: int = len(array)
+    sum: int = 0
+    for iterator in range(size):
+        sum += array[iterator]
+    return sum
+
+
+'''
+public int sumArray(int[] array) {
+    int size = array.length;
+    int sum = 0;
+
+    for (int iterator = 0; iterator < size; iterator++) {
+        sum += array[iterator];
+    }
+
+    return sum;
+}'''
+
+
 def compare(data: list):
     min_val = 100000
     global big_in_min

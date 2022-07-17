@@ -50,16 +50,20 @@ def get_samllest_node():
 def dikstra(start: int):
     distance[start] = 0
     visited[start] = 1
+
+    # start 가 알고 있는 노드와 간선에 대한 정보를 이용한다.
     for des, dist in graph[start]:
         distance[des] = dist
+
     for i in range(n - 1):
         # 전체 노드를 계속 탐색해서 가장 짧은 거리의 노드를 찾는다.
         now = get_samllest_node()
         visited[now] = True
+        # 다음 노드로가는 거리 비교
         for j_des, j_dist in graph[now]:
-            # 이전의 거리
+            # 현재까지의 거리 + 다음 목적지까지의 거리
             cost = distance[now] + j_dist
-            # 새로 탐색한 거리
+            # 새로 탐색한 다음 목적지까지의 거리 vs 현재까지 가지고있는 정보에 의한 다음 목적지까지의 거리
             if cost < distance[j_des]:
                 distance[j_des] = cost
 
